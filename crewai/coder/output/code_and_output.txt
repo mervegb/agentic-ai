@@ -1,0 +1,21 @@
+```text
+Code:
+def calculate_series(num_terms):
+  '''Calculates the sum of the series 1 - 1/3 + 1/5 - 1/7 + ... for a given number of terms.
+  Multiplies the final result by 4.
+  '''
+  total = 0.0
+  for i in range(num_terms):
+    term = 1.0 / (2 * i + 1)
+    if i % 2 == 0:
+      total += term
+    else:
+      total -= term
+  return total * 4
+
+num_terms = 10000
+result = calculate_series(num_terms)
+
+Output:
+3.1414926535900345
+```
